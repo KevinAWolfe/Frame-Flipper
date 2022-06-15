@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        min-height: 5em;
+        min-width: 200px;
+        padding: 1em;
+        background-color: #20222b;
+        color: white;
+        box-shadow:inset 0px 0px 0px 1px rgb(15, 16, 20);
+      }
+      #titleLine {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+      h3, p {
+        margin:0.5em 0;
+      }
+      h3 svg {
+        position: relative;
+        top: 2px;
+      }
+      #setMirror {
+        background-color: rgb(91, 83, 255);
+        color: white;
+        padding: 0.5em;
+        border: none;
+        border-radius: 0.2em;
+        margin-top: 1.5em;
+      }
+      #setMirror:hover {
+        background-color: rgb(86, 78, 242);
+      }
+      #setMirror:active {
+        background-color: rgb(81, 74, 229);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="titleLine">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" id="icon" width="16" height="16" fill="currentColor" class="bi bi-symmetry-vertical" viewBox="0 0 16 16">
+        <path d="M7 2.5a.5.5 0 0 0-.939-.24l-6 11A.5.5 0 0 0 .5 14h6a.5.5 0 0 0 .5-.5v-11zm2.376-.484a.5.5 0 0 1 .563.245l6 11A.5.5 0 0 1 15.5 14h-6a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .376-.484zM10 4.46V13h4.658L10 4.46z"/>
+      </svg> <span>Frame Flipper</span></h3>
+      <small>v1.0</small>
+    </div>
+    <p>Open the video on Frame.io then use the <i>Toggle Mirroring</i> button.</p>
+    <button id="setMirror">Toggle Mirroring</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

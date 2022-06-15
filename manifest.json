@@ -1,0 +1,33 @@
+{
+  "name": "Frame Flipper",
+  "description": "Horizontally flips (mirrors) the content of a video in Frame.io. Mirroring does not save to the video. It is only an adjustment to the view.",
+  "version": "1.0",
+  "author": "Andrew Wolfe",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches":["<all_urls>"],
+      "js":["toggleIcon.js"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Frame Flipper",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/frame_flipper16.png",
+      "32": "/images/frame_flipper32.png",
+      "48": "/images/frame_flipper48.png",
+      "128": "/images/frame_flipper128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/frame_flipper16.png",
+    "32": "/images/frame_flipper32.png",
+    "48": "/images/frame_flipper48.png",
+    "128": "/images/frame_flipper128.png"
+  }
+}
